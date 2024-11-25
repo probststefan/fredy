@@ -10,10 +10,10 @@ RUN yarn global add pm2
 
 RUN yarn run prod
 
-RUN mkdir /db /conf && \
+RUN mkdir /db && \
   chown 1000:1000 /db /conf && \
   chmod 777 -R /db/ && \
-  ln -s /db /fredy/db && ln -s /conf /fredy/conf
+  ln -s /db /fredy/db
 
 EXPOSE 9998
 
